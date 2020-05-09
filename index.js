@@ -9,5 +9,6 @@ fetch(API_URL)
 	.then( resp => resp.json() )
 	.then( file => {
 		const fighters = JSON.parse(atob(file.content));
-		console.log(fighters);
+		const names =  fighters.map(el => el.name).join("\n");
+		console.log(names);
 	});
