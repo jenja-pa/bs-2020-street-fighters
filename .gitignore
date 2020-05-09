@@ -1,1 +1,3 @@
-remote  #exclude folder remote
+ #exclude folder remote
+remote
+remote/
