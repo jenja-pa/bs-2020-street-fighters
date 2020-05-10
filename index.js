@@ -1,4 +1,5 @@
 const API_URL = 'https://api.github.com/';
+const fightersDetailsMap = new Map();
 
 var rootEl = document.getElementById("root");
 var loadEl = document.getElementById("loading-overlay");
@@ -76,13 +77,28 @@ function createFighter(fighter) {
   const imageElement = createImage(source);
   const element = createElement({ tagName: 'div', className: 'fighter' });
 
-  nameElement.addEventListener('click', (event) => handleFighterClick(event, 'text'), false)
-  element.addEventListener('click', (event) => handleFighterClick(event, 'wrapper'), false);
-  imageElement.addEventListener('click', (event) => handleFighterClick(event, 'image'), false);
 
-  function handleFighterClick(event, el) {
-    console.log(el);
+  element.addEventListener('click', (event) => handleFighterClick(event, fighter), false);
+
+  function handleFighterClick(event, fighter) {
+    const { _id } = fighter;
+
+    if(!fightersDetailsMap.has(_id)) {
+      // send request here
+      fightersDetailsMap.set(_id, fighter);
+    }
+
+    console.log(fightersDetailsMap.get(_id));
   }
+
+
+  // nameElement.addEventListener('click', (event) => handleFighterClick(event, 'text'), false)
+  // element.addEventListener('click', (event) => handleFighterClick(event, 'wrapper'), false);
+  // imageElement.addEventListener('click', (event) => handleFighterClick(event, 'image'), false);
+
+  // function handleFighterClick(event, el) {
+  //   console.log(el);
+  // }
 
   element.append(imageElement, nameElement);
 
