@@ -1,3 +1,5 @@
  #exclude folder remote
 remote
 remote/
+node_modules/
+dist/

@@ -1,0 +1,30 @@
+{
+  "name": "street-fighter-l",
+  "version": "1.0.0",
+  "description": "learn project for 2 lecture input test to binary studio 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenja-pa/bs-2020-street-fighters.git"
+  },
+  "keywords": [
+    "js",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jenja-pa/bs-2020-street-fighters/issues"
+  },
+  "homepage": "https://github.com/jenja-pa/bs-2020-street-fighters#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6"
+  }
+}
